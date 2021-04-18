@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface BankAccountRepository extends JpaRepository<BankAccount, Long> {
 
-    List<BankAccount> findAllByIsActive(Boolean isActive);
+    List<BankAccount> findAllByIsActiveTrue();
 }

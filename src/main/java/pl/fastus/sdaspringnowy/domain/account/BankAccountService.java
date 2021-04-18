@@ -37,7 +37,7 @@ public class BankAccountService {
 
     public List<AccountListView> findAllActiveAccounts() {
         return repository
-                .findAllByIsActive(true)
+                .findAllByIsActiveTrue()
                 .stream()
                 .map(mapper::mapBankAccountToAccountListView)
                 .collect(Collectors.toList());
